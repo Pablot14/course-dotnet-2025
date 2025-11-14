@@ -50,7 +50,7 @@ app.MapGet("/api/alumno/{alumnoId}", (int alumnoId,
 
     if (alumno is null)
     {
-        return Results.NotFound();
+        return Results.NotFound("Alumno no encontrado con el id proporcionado.");
     }
 
     return Results.Ok(alumno);
